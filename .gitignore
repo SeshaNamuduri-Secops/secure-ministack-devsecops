@@ -1,0 +1,33 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Lambda build/package artifacts
+lambda/build/
+lambda/function.zip
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# macOS
+.DS_Store
+
+# Test/output files
+developer-downloaded.txt
+developer-upload.txt
+downloaded-file.txt
+lambda-response.json
+lambda-get-response.json
+lambda-copy-response.json
+lambda-delete-response.json
+test-file.txt

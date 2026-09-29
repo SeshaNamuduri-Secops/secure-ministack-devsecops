@@ -1,0 +1,19 @@
+services:
+  ministack:
+    image: ministackorg/ministack:1.5.17
+    container_name: secure-ministack
+    ports:
+      - "4566:4566"
+    environment:
+      MINISTACK_REGION: us-east-1
+      MINISTACK_ACCOUNT_ID: "000000000000"
+      PERSIST_STATE: "1"
+      AUTH: "true"
+      LAMBDA_EXECUTOR: "local"
+      DOCKER_NETWORK: secure-ministack-devsecops_default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ministack-data:/data
+
+volumes:
+  ministack-data:

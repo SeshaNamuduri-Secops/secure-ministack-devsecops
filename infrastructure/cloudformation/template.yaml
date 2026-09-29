@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Secure MiniStack S3 infrastructure
+
+Resources:
+
+  SecureFilesBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: secure-files-bucket
