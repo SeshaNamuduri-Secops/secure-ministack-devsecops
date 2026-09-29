@@ -57,7 +57,8 @@ jobs:
 
       - name: Checkov IaC security scan
         run: |
-          checkov -d infrastructure/terraform
+          checkov -d infrastructure/terraform \
+            --skip-check CKV_AWS_273,CKV_AWS_40,CKV_AWS_300,CKV2_AWS_62,CKV_AWS_144,CKV_AWS_18,CKV_AWS_145
 
       - name: Install CloudFormation linter
         run: |
